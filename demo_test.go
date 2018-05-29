@@ -37,22 +37,33 @@ func TestFilterDuplicateElem(t *testing.T){
 }
 
 // 从map[string]string中找到最大的value对应的key值
-func getMaxKeyValue(hkjlMap map[string]string)(key, value int){
+func getMaxKeyValue(hkjlMap map[string]string) (key, value int) {
 	for k, v := range hkjlMap {
+		// 将string类型的k转为int,这个绝对不会有err,因为key都是数字1-24
 		intKey, _ := strconv.Atoi(k)
-		intValue , err := strconv.Atoi(v)
+		// 将string类型的value转int，如果没有错误，就说明该value是字符串数字
+		intValue, err := strconv.Atoi(v)
 		if err == nil {
-			if key < intKey {
-				key = intKey
+			// 如果value相等，取最大的key
+			if value == intValue && key < intKey{
 				value = intValue
-			}
-			if value == intValue {
-				if key < intKey {
-					key = intKey
-					value = intValue
-				}
+				key = intKey
+			}else if key < intKey && value <= intValue{
+				value = intValue
+				key = intKey
 			}
 		}
 	}
 	return
+}
+
+// 查找数组中最小的元素
+func getMinValueInArray(array []int) int {
+	min := array[0]
+	for i := 1; i < len(array)-1; i++ {
+		if min > array[i] {
+			min = array[i]
+		}
+	}
+	return min
 }

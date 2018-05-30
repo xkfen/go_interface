@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"go_interface/tool"
 	"strconv"
+	"time"
 )
 
 // 测试字符串数组转字符串
@@ -66,4 +67,12 @@ func getMinValueInArray(array []int) int {
 		}
 	}
 	return min
+}
+
+// 计算两个日期之间相差多少个月份
+func GetDiffMonth(dateOne time.Time, dateTwo time.Time) int {
+
+	// 思路：(年 - 年) * 12 + (月 - 月)
+	count := (dateOne.Year() - dateTwo.Year()) * 12 + (int(dateOne.Month()) - int(dateTwo.Month()))
+	return count
 }

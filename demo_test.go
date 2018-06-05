@@ -130,3 +130,17 @@ func GetMonthStartEndDate(checkTime time.Time)(time.Time, time.Time){
 	end := time.Date(yearEndTmp, monthEndTmp, 0,0,0,0,0,  time.Local)
 	return tool.GetDate(start), tool.GetDate(end)
 }
+
+// 测试往后多少个月
+func TestMonthMove(t *testing.T){
+	/**
+	往后一个月的意思是     月份数+1    日期数-1
+	往前N个月的意思是    月份数-N   日期数+1
+	 */
+	now := time.Now()
+	// 当前时间往后1个月
+	date1 := now.AddDate(0, 1, -1)
+	fmt.Println(date1)
+	date2 := now.AddDate(0, -1, 1)
+	fmt.Println(date2)
+}

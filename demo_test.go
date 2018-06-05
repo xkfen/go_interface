@@ -7,6 +7,7 @@ import (
 	"go_interface/tool"
 	"strconv"
 	"time"
+	"github.com/tidwall/gjson"
 )
 
 // 测试字符串数组转字符串
@@ -58,7 +59,7 @@ func getMaxKeyValue(hkjlMap map[string]string) (key, value int) {
 	return
 }
 
-// 查找数组中最小的元素
+// 查找数组中最小的元素xkfen
 func getMinValueInArray(array []int) int {
 	min := array[0]
 	for i := 1; i < len(array)-1; i++ {
@@ -75,4 +76,47 @@ func GetDiffMonth(dateOne time.Time, dateTwo time.Time) int {
 	// 思路：(年 - 年) * 12 + (月 - 月)
 	count := (dateOne.Year() - dateTwo.Year()) * 12 + (int(dateOne.Month()) - int(dateTwo.Month()))
 	return count
+}
+
+func TestGetJsonData(t *testing.T){
+	str := `{"status":200,"total":0,"data":[{"uuid":"45ffeb65-a3cd-49f8-b8a1-c43d8823827c","roleUuid":"1","userName":"root","password":"ED45BEF8","phone":"18689841696","phoneState":1,"email":"463121419@qq.com","emailState":1,"updateTime":"2018-05-29T10:30:01+08:00","createTime":"2018-05-16T12:07:55+08:00","describe":"-测试环境初始化账号","roleName":"Super_admin","alias":"超级管理员","status":1},{"uuid":"7e3cd09a-0ae3-4c1a-b65f-64f86d66d5fe","roleUuid":"9f6afc27-d1e8-4084-ba30-1b27aae94a3f","userName":"qeq","password":"ED45BEF8","phone":"","phoneState":0,"email":"","emailState":0,"updateTime":"2018-05-24T08:47:11+08:00","createTime":"2018-05-24T15:19:00+08:00","describe":"eqeq","roleName":"q","alias":"","status":0},{"uuid":"c6c44e04-8ea8-444b-b726-4c790f159cb6","roleUuid":"dc49b101-2bb8-4316-b551-eef6a24ef1a7","userName":"fanxing","password":"019A9BF2","phone":"15764336108","phoneState":1,"email":"642664360@qq.com","emailState":1,"updateTime":"2018-05-29T06:59:44+08:00","createTime":"2018-05-24T17:43:31+08:00","describe":"fanxing","roleName":"fanxing","alias":"fanxing","status":1},{"uuid":"e4281d2d-ac27-4a61-91a6-4c19f5ffcf70","roleUuid":"9f6afc27-d1e8-4084-ba30-1b27aae94a3f","userName":"qqqqq","password":"8CE74A94","phone":"18689841694","phoneState":0,"email":"323344@qq.com","emailState":1,"updateTime":"2018-05-25T10:11:24+08:00","createTime":"2018-05-23T18:44:00+08:00","describe":"qqq1111","roleName":"q","alias":"root","status":0}],"reason":""}`
+
+	status := gjson.Get(str, "status").Raw
+	fmt.Println(status)
+}
+
+type Resp struct {
+	Status int `json:"status"`
+	Total int `json:"total"`
+	Data []Data `json:"data"`
+	
+}
+type Data struct {
+	Uuid string `json:"uuid"`
+	RoleUuid string `json:"roleUuid"`
+	UserName string `json:"userName"`
+	Password string `json:"password"`
+	Phone string `json:"phone"`
+	PhoneState int `json:"phoneState"`
+	Email string `json:"email"`
+	EmailState int `json:"emailState"`
+	UpdateTime string `json:"updateTime"`
+	CreateTime string `json:"createTime"`
+	Describe string `json:"describe"`
+	RoleName string `json:"roleName"`
+	Alias string `json:"alias"`
+	Status int `json:"status"`
+}
+
+func TestShow(t *testing.T){
+	fmt.Println(Resp{})
+}
+
+// 得到今天的时间范围
+func GetToday()(start time.Time, end time.Time){
+	now := time.Now()
+	start = now.Truncate(time.Hour * 24).Add(time.Hour * -8 )
+	next := now.Add(time.Hour * 24 )
+	end = time.Date(next.Year(), next.Month(), next.Day(), 0,0,0,0,next.Location())
+	return
 }

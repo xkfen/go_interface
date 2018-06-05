@@ -120,3 +120,13 @@ func GetToday()(start time.Time, end time.Time){
 	end = time.Date(next.Year(), next.Month(), next.Day(), 0,0,0,0,next.Location())
 	return
 }
+
+// 得到月初和月末的日期
+func GetMonthStartEndDate(checkTime time.Time)(time.Time, time.Time){
+	year, month , _ := checkTime.Date()
+	start := time.Date(year, month, 1, 0, 0,0, 0, time.Local)
+	endTmp := checkTime.AddDate(0, 1, 0)
+	yearEndTmp, monthEndTmp , _ := endTmp.Date()
+	end := time.Date(yearEndTmp, monthEndTmp, 0,0,0,0,0,  time.Local)
+	return tool.GetDate(start), tool.GetDate(end)
+}

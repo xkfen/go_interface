@@ -196,7 +196,7 @@ func ChangeStrTime2Time(strTime string) time.Time {
 						if err != nil {
 							date, err = time.Parse("2006.01", strTime)
 							if err != nil {
-								logger.Warn("warn", "从征信json里面取出来的查询日期转换格式出错", err.Error())
+								fmt.Println(err.Error())
 							}
 						}
 
@@ -206,4 +206,11 @@ func ChangeStrTime2Time(strTime string) time.Time {
 		}
 	}
 	return date
+}
+
+func TestMap(t *testing.T){
+	var map1 map[string]interface{}
+	fmt.Println(map1 == nil)
+	map2 := make(map[string]interface{})
+	fmt.Println(map2 ==  nil)
 }

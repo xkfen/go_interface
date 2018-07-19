@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a7d9726-1257-426a-8a0a-d3913b2496be" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/json_test.go" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/demo_test.go" afterPath="$PROJECT_DIR$/demo_test.go" />
     </list>
@@ -14,13 +15,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="demo_test.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="demo_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+            <state relative-caret-position="344">
+              <caret line="212" column="28" lean-forward="false" selection-start-line="212" selection-start-column="28" selection-end-line="212" selection-end-column="28" />
               <folding>
                 <element signature="e#14#121#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="json_test.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/json_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+              <folding>
+                <element signature="e#14#107#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,6 +71,7 @@
         <option value="$PROJECT_DIR$/test/demo_test.go" />
         <option value="$PROJECT_DIR$/tool/http_util.go" />
         <option value="$PROJECT_DIR$/demo_test.go" />
+        <option value="$PROJECT_DIR$/json_test.go" />
       </list>
     </option>
   </component>
@@ -67,11 +81,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="394" />
-    <option name="y" value="427" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="332" />
+    <option name="y" value="213" />
     <option name="width" value="1398" />
-    <option name="height" value="651" />
+    <option name="height" value="829" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -96,16 +110,6 @@
             <path>
               <item name="go_interface" type="b2602c69:ProjectViewProjectNode" />
               <item name="go_interface" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go_interface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go_interface" type="462c0819:PsiDirectoryNode" />
-              <item name="interface" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go_interface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go_interface" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -136,24 +140,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestGetJsonData in demo_test.go">
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
-      <module name="go_interface" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="go_interface" />
-      <directory value="$PROJECT_DIR$/" />
-    </configuration>
-    <configuration name="TestFilterDuplicateElem in demo_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+  <component name="RunManager" selected="Go Test.TestString in json_test.go">
+    <configuration name="TestCheckIsLetter in json_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="go_interface" />
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
       <package value="go_interface" />
-      <pattern value="^TestFilterDuplicateElem$" />
+      <pattern value="^TestCheckIsLetter$" />
     </configuration>
     <configuration name="TestGetJsonData in demo_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="go_interface" />
@@ -164,38 +159,47 @@
       <package value="go_interface" />
       <pattern value="^TestGetJsonData$" />
     </configuration>
-    <configuration name="TestStrArray2Str in demo_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+    <configuration name="TestJsonMarshal in json_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="go_interface" />
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
       <package value="go_interface" />
-      <pattern value="^TestStrArray2Str$" />
+      <pattern value="^TestJsonMarshal$" />
     </configuration>
-    <configuration name="TestYear in demo_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+    <configuration name="TestMap in demo_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="go_interface" />
-      <working_directory value="$PROJECT_DIR$/test" />
+      <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="go_interface/test" />
-      <pattern value="^TestYear$" />
+      <package value="go_interface" />
+      <pattern value="^TestMap$" />
+    </configuration>
+    <configuration name="TestString in json_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+      <module name="go_interface" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go_interface" />
+      <pattern value="^TestString$" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go" />
-      <item index="1" class="java.lang.String" itemvalue="Go Test.TestYear in demo_test.go" />
-      <item index="2" class="java.lang.String" itemvalue="Go Test.TestStrArray2Str in demo_test.go" />
-      <item index="3" class="java.lang.String" itemvalue="Go Test.TestFilterDuplicateElem in demo_test.go" />
-      <item index="4" class="java.lang.String" itemvalue="Go Test.TestGetJsonData in demo_test.go" />
+      <item index="0" class="java.lang.String" itemvalue="Go Test.TestGetJsonData in demo_test.go" />
+      <item index="1" class="java.lang.String" itemvalue="Go Test.TestMap in demo_test.go" />
+      <item index="2" class="java.lang.String" itemvalue="Go Test.TestJsonMarshal in json_test.go" />
+      <item index="3" class="java.lang.String" itemvalue="Go Test.TestCheckIsLetter in json_test.go" />
+      <item index="4" class="java.lang.String" itemvalue="Go Test.TestString in json_test.go" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Go Test.TestGetJsonData in demo_test.go" />
-        <item index="1" class="java.lang.String" itemvalue="Go Test.TestStrArray2Str in demo_test.go" />
-        <item index="2" class="java.lang.String" itemvalue="Go Test.TestFilterDuplicateElem in demo_test.go" />
-        <item index="3" class="java.lang.String" itemvalue="Go Test.TestYear in demo_test.go" />
-        <item index="4" class="java.lang.String" itemvalue="Go Build.go build main.go" />
+        <item index="0" class="java.lang.String" itemvalue="Go Test.TestString in json_test.go" />
+        <item index="1" class="java.lang.String" itemvalue="Go Test.TestCheckIsLetter in json_test.go" />
+        <item index="2" class="java.lang.String" itemvalue="Go Test.TestJsonMarshal in json_test.go" />
+        <item index="3" class="java.lang.String" itemvalue="Go Test.TestMap in demo_test.go" />
+        <item index="4" class="java.lang.String" itemvalue="Go Test.TestGetJsonData in demo_test.go" />
       </list>
     </recent_temporary>
   </component>
@@ -203,40 +207,49 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestFilterDuplicateElem_in_demo_test_go - 2018.05.29 at 15h 27m 52s.xml">
-      <configuration name="TestFilterDuplicateElem in demo_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestString_in_json_test_go - 2018.07.19 at 18h 04m 09s.xml">
+      <configuration name="TestString in json_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestGetJsonData_in_demo_test_go - 2018.05.30 at 17h 18m 28s.xml">
-      <configuration name="TestGetJsonData in demo_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestString_in_json_test_go - 2018.07.19 at 18h 08m 27s.xml">
+      <configuration name="TestString in json_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestGetJsonData_in_demo_test_go - 2018.05.30 at 17h 18m 39s.xml">
-      <configuration name="TestGetJsonData in demo_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestString_in_json_test_go - 2018.07.19 at 18h 08m 41s.xml">
+      <configuration name="TestString in json_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestStrArray2Str_in_demo_test_go - 2018.05.29 at 15h 24m 16s.xml">
-      <configuration name="TestStrArray2Str in demo_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestString_in_json_test_go - 2018.07.19 at 18h 09m 02s.xml">
+      <configuration name="TestString in json_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestStrArray2Str_in_demo_test_go - 2018.05.29 at 15h 28m 01s.xml">
-      <configuration name="TestStrArray2Str in demo_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestString_in_json_test_go - 2018.07.19 at 18h 09m 47s.xml">
+      <configuration name="TestString in json_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestYear_in_demo_test_go - 2018.05.28 at 10h 28m 59s.xml">
-      <configuration name="TestYear in demo_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestString_in_json_test_go - 2018.07.19 at 18h 12m 53s.xml">
+      <configuration name="TestString in json_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestYear_in_demo_test_go - 2018.05.28 at 10h 29m 11s.xml">
-      <configuration name="TestYear in demo_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestString_in_json_test_go - 2018.07.19 at 18h 13m 10s.xml">
+      <configuration name="TestString in json_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestString_in_json_test_go - 2018.07.19 at 18h 15m 26s.xml">
+      <configuration name="TestString in json_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestString_in_json_test_go - 2018.07.19 at 18h 15m 54s.xml">
+      <configuration name="TestString in json_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestString_in_json_test_go - 2018.07.19 at 18h 16m 53s.xml">
+      <configuration name="TestString in json_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="332" y="213" width="1398" height="829" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27302814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36504424" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41220558" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36671576" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17987151" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.179676" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -255,7 +268,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -477,8 +492,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+        <state relative-caret-position="344">
+          <caret line="212" column="28" lean-forward="false" selection-start-line="212" selection-start-column="28" selection-end-line="212" selection-end-column="28" />
           <folding>
             <element signature="e#14#121#0" expanded="true" />
           </folding>
@@ -490,6 +505,24 @@
         <state relative-caret-position="2340">
           <caret line="159" column="1" lean-forward="false" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/regexp/regexp.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="131" column="5" lean-forward="false" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+          <folding>
+            <element signature="e#14#107#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

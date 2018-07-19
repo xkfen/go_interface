@@ -59,7 +59,7 @@ func getMaxKeyValue(hkjlMap map[string]string) (key, value int) {
 	return
 }
 
-// 查找数组中最小的元素xkfen
+// 查找数组中最小的元素
 func getMinValueInArray(array []int) int {
 	min := array[0]
 	for i := 1; i < len(array)-1; i++ {
@@ -145,19 +145,6 @@ func TestMonthMove(t *testing.T){
 	fmt.Println(date2)
 }
 
-
-// 将string类型的日期转为time.Time类型的日期
-func ChangeStrTime2Time(strTime string) time.Time {
-	date, err := time.Parse("2006.01.02", strTime)
-	if err != nil {
-		date, err = time.Parse("2006年01月02日", strTime)
-		if err != nil {
-			fmt.Println(err.Error())
-		}
-	}
-	return date
-}
-
 // 给定的时间往后month个月:往后一个月的意思是     月份数+1    日期数-1
 func GetBackMonth(checkTime time.Time, month int) (time.Time) {
 	date := checkTime.AddDate(0, month, -1)
@@ -191,4 +178,32 @@ func FilterDuplicateElem(array []string) []string {
 		tmpArr = append(tmpArr, k)
 	}
 	return tmpArr
+}
+
+// 将string类型的日期转为time.Time类型的日期
+func ChangeStrTime2Time(strTime string) time.Time {
+	date, err := time.Parse("2006.01.02", strTime)
+	if err != nil {
+		date, err = time.Parse("2006年01月02日", strTime)
+		if err != nil {
+			date, err = time.Parse("2006.01 .02", strTime)
+			if err != nil {
+				date, err = time.Parse("2006年01月", strTime)
+				if err != nil {
+					date, err = time.Parse("2006 01 02", strTime)
+					if err != nil {
+						date, err = time.Parse("2006-1-2", strTime)
+						if err != nil {
+							date, err = time.Parse("2006.01", strTime)
+							if err != nil {
+								logger.Warn("warn", "从征信json里面取出来的查询日期转换格式出错", err.Error())
+							}
+						}
+
+					}
+				}
+			}
+		}
+	}
+	return date
 }
